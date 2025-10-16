@@ -53,3 +53,40 @@ function loginUserMessage (username = 'sam'){
 }
 // console.log(loginUserMessage("kashif"))   //  o/p -> kashif just logged in
 // console.log(loginUserMessage()) 
+
+
+/* when the product are many at that time use spread operator or rest operator (...) the three dot denotes as rest or sprea operator the name for it spread or rest is based on thier use */
+
+function calculateCartPrice(...num1){
+    return num1
+}
+// console.log(calculateCartPrice(2200,255,980)); // o/p -> will be in array [2200, 255, 980]
+
+function calculateCartPrice(var1,var2, ...num1){  // in this the var1 and var2 takes the value of 2200,255 remainig wwill be as an output
+    return num1
+}
+//console.log(calculateCartPrice(2200,255,980)); // o/p -> will be in array [ 980]
+
+//**                                    Objects in Function                 ****************************/
+
+// create an object
+
+const user={
+    username :"kashif",
+    prices : "999"
+}
+function handleObject(anyObject){
+    console.log( `username is ${anyObject.username} and total price is ${anyObject.prices} `)
+}
+handleObject(user)
+
+
+//**           arrays in function */
+
+
+const myNewArray =[200, 400, 600, 800]
+function returnSecondValue(getArray){
+    return getArray[2]
+}
+
+console.log(returnSecondValue(myNewArray));
